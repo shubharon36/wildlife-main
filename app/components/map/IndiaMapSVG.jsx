@@ -6,11 +6,10 @@ import { stateData, svgIdToStateCode, stateToRegion, regionColors, stateMapLabel
 // Dynamically import IndiaMap to avoid SSR issues
 const IndiaMap = dynamic(() => import('@aryanjsx/indiamap'), { ssr: false })
 
-export default function IndiaMapSVG({ onStateHover, hoveredStateId, mode = 'states' }) {
+export default function IndiaMapSVG({ onStateHover, hoveredStateId }) {
   const containerRef = useRef(null)
 
   const handleMouseOver = useCallback((e) => {
-    if (mode !== 'states') return
     const target = e.target
     if (target.tagName === 'path') {
       const id = target.id
@@ -19,17 +18,16 @@ export default function IndiaMapSVG({ onStateHover, hoveredStateId, mode = 'stat
         onStateHover(code)
       }
     }
-  }, [onStateHover, mode])
+  }, [onStateHover])
 
   const handleMouseOut = useCallback((e) => {
-    if (mode !== 'states') return
     const target = e.target
     if (target.tagName === 'path') {
       onStateHover(null)
     }
-  }, [onStateHover, mode])
+  }, [onStateHover])
 
-  // Add labels + apply region colors when in region mode
+  // Add labels + apply region colors
   useEffect(() => {
     const container = containerRef.current
     if (!container) return
@@ -48,25 +46,11 @@ export default function IndiaMapSVG({ onStateHover, hoveredStateId, mode = 'stat
         const info = stateData[code]
         if (!info) return
 
-        // Apply region colors if in region mode
-        if (mode === 'regions') {
-          const region = stateToRegion[code]
-          if (region && regionColors[region]) {
-            path.style.fill = regionColors[region]
-            path.style.transition = 'fill 0.3s ease'
-          }
-        } else {
-          // Reset to default map color for state mode
-          path.style.fill = ''
-          path.style.transition = 'fill 0.3s ease'
-        }
-
-        const bbox = path.getBBox()
+        // Colors are handled by the <style> block below
         const cx = bbox.x + bbox.width / 2
         const cy = bbox.y + bbox.height / 2
 
-        if (mode === 'states') {
-          // Dynamic font size based on state area
+        // Dynamic font size based on state area
           const area = bbox.width * bbox.height
           const labelText = stateMapLabel[code] || code
           const labelLen = labelText.length
@@ -104,54 +88,22 @@ export default function IndiaMapSVG({ onStateHover, hoveredStateId, mode = 'stat
           countText.setAttribute('opacity', '0.75')
           countText.textContent = String(info.sanctuaries)
           svg.appendChild(countText)
-        }
       })
-
-      // Add region name labels if in region mode
-      if (mode === 'regions') {
-        const regionCenters = {}
-        paths.forEach((path) => {
-          const pathId = path.id
-          const code = svgIdToStateCode[pathId] || pathId
-          const region = stateToRegion[code]
-          if (!region) return
-
-          const bbox = path.getBBox()
-          if (!regionCenters[region]) {
-            regionCenters[region] = { xs: [], ys: [], areas: [] }
-          }
-          const area = bbox.width * bbox.height
-          regionCenters[region].xs.push(bbox.x + bbox.width / 2)
-          regionCenters[region].ys.push(bbox.y + bbox.height / 2)
-          regionCenters[region].areas.push(area)
-        })
-
-        Object.entries(regionCenters).forEach(([region, data]) => {
-          // Weighted average by area
-          const totalArea = data.areas.reduce((a, b) => a + b, 0)
-          const cx = data.xs.reduce((sum, x, i) => sum + x * data.areas[i], 0) / totalArea
-          const cy = data.ys.reduce((sum, y, i) => sum + y * data.areas[i], 0) / totalArea
-
-          const regionName = region === 'Northeast' ? 'North-East' : region
-          const text = document.createElementNS('http://www.w3.org/2000/svg', 'text')
-          text.setAttribute('x', String(cx))
-          text.setAttribute('y', String(cy))
-          text.setAttribute('text-anchor', 'middle')
-          text.setAttribute('dominant-baseline', 'central')
-          text.setAttribute('class', 'state-label')
-          text.setAttribute('fill', '#1a1a2e')
-          text.setAttribute('font-size', '5')
-          text.setAttribute('font-weight', '700')
-          text.setAttribute('pointer-events', 'none')
-          text.setAttribute('font-family', 'sans-serif')
-          text.textContent = regionName
-          svg.appendChild(text)
-        })
-      }
     }, 500)
 
     return () => clearTimeout(timer)
-  }, [mode])
+  }, [])
+
+  const customCss = Object.keys(stateData).map(code => {
+    const region = stateToRegion[code];
+    const color = (region && regionColors[region]) ? regionColors[region] : 'hsl(200, 55%, 35%)';
+    return `path#${code} { fill: ${color} !important; }`;
+  }).join(' ') + ' ' + Object.keys(svgIdToStateCode).map(id => {
+    const code = svgIdToStateCode[id];
+    const region = stateToRegion[code];
+    const color = (region && regionColors[region]) ? regionColors[region] : 'hsl(200, 55%, 35%)';
+    return `path#${id} { fill: ${color} !important; }`;
+  }).join(' ');
 
   return (
     <div
@@ -160,10 +112,11 @@ export default function IndiaMapSVG({ onStateHover, hoveredStateId, mode = 'stat
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
+      <style dangerouslySetInnerHTML={{ __html: customCss }} />
       <IndiaMap
         size="100%"
         mapColor="hsl(200, 55%, 35%)"
-        hoverColor={mode === 'states' ? 'hsl(200, 65%, 25%)' : undefined}
+        hoverColor="transparent"
         strokeColor="hsl(36, 30%, 98%)"
         strokeWidth="0.5"
         onClick={() => {}}

@@ -15,9 +15,12 @@ export default function Footer() {
         </Copy>
       </div>
 
-      <div className=' h-fit flex items-center mt-[8vw] justify-start w-full py-[4vw]'>
+      <div className=' h-fit flex flex-col mt-[8vw] justify-start w-full py-[4vw]'>
         <Copy>
           <p className='text-[3vw] font-sansumi leading-[1.2] font-medium tracking-tight w-[60%]'><span style={{ WebkitTextStroke: '2px var(--foreground)' }}>"</span>The continued existence of wildlife and wilderness is important to the quality of life of humans.<span style={{ WebkitTextStroke: '2px var(--foreground)' }}>"</span></p>
+        </Copy>
+        <Copy delay={0.15}>
+          <p className='text-[1.2vw] font-medium mt-[1vw] ml-[20vw]'>– Jim Fowler</p>
         </Copy>
       </div>
 
@@ -26,7 +29,7 @@ export default function Footer() {
       </div>
       <div className='h-full w-[40vw] absolute right-[-2vw] bottom-0 flex items-center justify-center'>
         <Image
-          src='/img/panther2.png'
+          src='/img/tigger.png'
           alt='footer-image'
           width={1000}
           height={1000}
@@ -34,8 +37,8 @@ export default function Footer() {
         />
       </div>
 
-      <div className='flex items-center  absolute left-[5vw] bottom-[2vw] gap-[5vw]'>
-        <Copy delay={0.2}>
+      <div className='flex items-center absolute left-[5vw] bottom-[6vw] gap-[5vw]'>
+        {/* <Copy delay={0.2}>
           <p className='text-[1.2vw] font-medium'>Explore Region</p>
         </Copy>
         <Copy delay={0.3}>
@@ -43,6 +46,12 @@ export default function Footer() {
         </Copy>
         <Copy delay={0.4}>
           <p className='text-[1.2vw] font-medium'>Sanctuaries</p>
+        </Copy> */}
+      </div>
+
+      <div className='absolute left-[5vw] bottom-[2vw]'>
+        <Copy delay={0.5}>
+          <p className='text-[1.2vw] text-black/10000'>© Priyanshi Chauhan</p>
         </Copy>
       </div>
 

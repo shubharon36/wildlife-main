@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { Calendar } from 'lucide-react'
 import { getFeaturedSanctuariesForHabitat } from '../../data/regions'
 
 export default function HabitatDrawerContent({ region, habitat }) {
@@ -18,29 +19,61 @@ export default function HabitatDrawerContent({ region, habitat }) {
         <div className="space-y-[2vw] pt-[1vw]">
           {featuredSanctuaries.map((sanctuary, index) => (
             <div key={`${sanctuary.name}-${index}`}>
-              <div className='w-full h-fit rounded-[1vw] border border-foreground overflow-hidden relative group cursor-pointer'>
+              <div className='w-full h-fit rounded-[1vw] border border-black/15 overflow-hidden relative group cursor-pointer'>
 
-                {/* Hover overlay - covers entire card */}
-                <div className='absolute inset-0 bg-black/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex flex-col justify-center items-center p-[1.5vw] text-white'>
-                  <p className='text-[1.2vw] font-sansumi font-medium mb-[1vw]'>{sanctuary.name}</p>
-                  <p className='text-[0.9vw] text-center mb-[1vw] opacity-90'>{sanctuary.description}</p>
-                  <div className='flex flex-wrap justify-center gap-[0.5vw] mb-[1vw]'>
-                    {sanctuary.keySpecies.map((species, idx) => (
-                      <span key={idx} className='px-[0.8vw] py-[0.3vw] bg-white/20 rounded-full text-[0.75vw]'>{species}</span>
-                    ))}
-                  </div>
-                  <div className='flex gap-[2vw] text-[0.8vw]'>
-                    <div className='text-center'>
-                      <p className='opacity-60 uppercase tracking-wide'>Area</p>
-                      <p className='font-medium'>{sanctuary.area}</p>
+                {/* White info card overlay on hover */}
+                <div
+                  className='absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-all duration-400 pointer-events-none group-hover:pointer-events-auto'
+                >
+                  <div className='absolute inset-0 bg-white rounded-[1vw] border-[2px] border-[#5b9bd5]/40 shadow-[0_0_1.5vw_rgba(91,155,213,0.15)] p-[1.5vw] flex flex-col justify-center'>
+                    {/* Established year */}
+                    <div className='flex items-center gap-[0.6vw] mb-[1vw]'>
+                      <Calendar className='w-[1.2vw] h-[1.2vw] text-black/50' strokeWidth={1.5} />
+                      <span className='text-[1vw] text-black/80'>
+                        Est. <span className='font-semibold text-black'>{sanctuary.established}</span>
+                      </span>
                     </div>
-                    <div className='text-center'>
-                      <p className='opacity-60 uppercase tracking-wide'>Established</p>
-                      <p className='font-medium'>{sanctuary.established}</p>
+
+                    {/* Biospheric zone */}
+                    <p className='text-[0.9vw] text-black/70 mb-[0.6vw]'>
+                      Biospheric zone: <span className='font-semibold text-black'>{sanctuary.location}</span>
+                    </p>
+
+                    {/* Best Time to Visit */}
+                    <p className='text-[0.9vw] text-black/70 mb-[0.6vw]'>
+                      Best Time to Visit: <span className='font-semibold text-black'>{sanctuary.bestTime}</span>
+                    </p>
+
+                    {/* Key Species */}
+                    <p className='text-[0.9vw] text-black/70 mb-[0.8vw]'>
+                      Key Species: <span className='font-semibold text-black'>{sanctuary.keySpecies.join(', ')}</span>
+                    </p>
+
+                    {/* Habitat tags */}
+                    <div className='mb-[0.8vw]'>
+                      <p className='text-[0.8vw] text-black/50 mb-[0.4vw]'>Habitat</p>
+                      <div className='flex flex-wrap gap-[0.4vw]'>
+                        {region.habitats?.map((h) => (
+                          <span
+                            key={h.name}
+                            className='px-[0.8vw] py-[0.3vw] rounded-full text-[0.75vw] font-medium border'
+                            style={{
+                              borderColor: h.name === habitat.name ? h.color : '#d1d5db',
+                              color: h.name === habitat.name ? h.color : '#6b7280',
+                              backgroundColor: h.name === habitat.name ? `${h.color}10` : 'transparent',
+                            }}
+                          >
+                            {h.name}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                    <div className='text-center'>
-                      <p className='opacity-60 uppercase tracking-wide'>Best Time</p>
-                      <p className='font-medium'>{sanctuary.bestTime}</p>
+
+                    {/* Highlight / description */}
+                    <div className='border-t border-black/10 pt-[0.7vw]'>
+                      <p className='text-[0.85vw] text-black/60'>
+                        Highlight: <span className='font-semibold text-black'>{sanctuary.description}</span>
+                      </p>
                     </div>
                   </div>
                 </div>
