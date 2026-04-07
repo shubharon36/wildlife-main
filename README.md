@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🐾 Wildlife Sanctuary India
 
-## Getting Started
+An immersive, animated web experience showcasing India's wildlife sanctuaries across geographical regions — built with Next.js and GSAP.
 
-First, run the development server:
+## ✨ Features
+
+- **Cinematic Hero** — 3D sequence with ambient bird sounds and smooth scroll-driven animations
+- **Interactive India Map** — SVG map with per-state hover info cards and region-based color coding
+- **Explore by Regions** — Animated bubble navigation with side drawers for region details, habitat types, and featured sanctuary cards
+- **Habitat & Species Distribution** — Data-driven charts and visual breakdowns
+- **Sanctuary Timeline** — Historical overview of India's conservation milestones
+- **Smooth Scrolling** — Lenis-powered buttery scroll with GSAP-driven reveal animations throughout
+
+## 🛠 Tech Stack
+
+| Layer | Tech |
+|-------|------|
+| Framework | Next.js 16, React 19 |
+| Styling | Tailwind CSS 4 |
+| Animation | GSAP, Motion (Framer Motion) |
+| 3D | React Three Fiber, Drei |
+| Scroll | Lenis |
+| Icons | Lucide React |
+
+## 🚀 Getting Started
 
 ```bash
+# Clone
+git clone https://github.com/shubharon36/wildlife-main.git
+cd wildlife-main
+
+# Install
+npm install
+
+# Run
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+├── components/
+│   ├── explore/        # Region drawers, habitat cards, bubbles
+│   ├── map/            # Interactive India SVG map
+│   ├── footer/         # Footer with quote & credits
+│   ├── HeroSequence    # 3D cinematic hero
+│   └── ...             # Timeline, Distribution, Discover, etc.
+├── data/               # Regions & states datasets
+└── page.js             # Main page composition
+```
 
-## Learn More
+## 📝 License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© Priyanshi Chauhan
