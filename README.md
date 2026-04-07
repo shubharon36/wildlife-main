@@ -52,6 +52,3 @@ app/
 └── page.js             # Main page composition
 ```
 
-## 📝 License
-
-© Priyanshi Chauhan
