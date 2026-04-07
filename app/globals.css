@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  /* --background: #F1C05E; */
+  --background: #fff4e5;
+  --foreground: #3e2407;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-sansumi: var(--font-sansumi);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), serif;
+  overflow-x: hidden;
+}
+
+
+.padd{
+  padding: 2vw 5vw;
+}
+.font-sansumi{
+  font-family: var(--font-sansumi), serif;
+  font-weight: 600;
+}
