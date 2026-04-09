@@ -27,7 +27,7 @@ export default function WildLifeSantuaries() {
         <div className='relative text-black! h-screen w-full padd'>
             <div className='flex items-start gap-[1vw]'>
                 <div className='h-[2vw] relative w-auto'>
-                    <Image src='/paw.svg' alt='logo' width={1000} height={1000} className='w-full mt-[1vw] h-auto object-cover' />
+                    {/*  <Image src='/paw.svg' alt='logo' width={1000} height={1000} className='w-full mt-[1vw] h-auto object-cover' /> */}
                 </div>
                 <Copy>
 
@@ -135,7 +135,7 @@ export default function WildLifeSantuaries() {
 
 
             </div>
-           
+
         </div>
     )
 }

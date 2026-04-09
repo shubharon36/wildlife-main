@@ -178,7 +178,7 @@ export default function HabitatSpeciesDistribition() {
         <div className='w-full h-fit mb-[10vw] mt-[4vw] min-h-screen bg-[#fff4e5] relative padd text-black!'>
             <div className='h-fit w-full flex items-start gap-[1vw] justify-start'>
                 <div className='h-[4vw] w-auto mt-[1vw] overflow-hidden rounded-[1vw]'>
-                    <Image src='/paw.svg' alt='leopard' width={1000} height={1000} className='w-full h-full object-contain' />
+                    {/* <Image src='/paw.svg' alt='leopard' width={1000} height={1000} className='w-full h-full object-contain' /> */}
                 </div>
                 <h2 className='text-[6vw] w-full font-sansumi leading-[1.2]'>Habitat–Species Distribution Analysis</h2>
 

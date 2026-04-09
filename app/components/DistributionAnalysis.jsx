@@ -18,7 +18,7 @@ export default function DistributionAnalysis() {
                     viewport={{ once: true }}
                     className='h-[4vw] w-auto mt-[1vw] overflow-hidden rounded-[1vw]'
                 >
-                    <Image src='/paw.svg' alt='leopard' width={1000} height={1000} className='w-full h-full object-contain' />
+                    {/* <Image src='/paw.svg' alt='leopard' width={1000} height={1000} className='w-full h-full object-contain' /> */}
                 </motion.div>
 
                 <Copy>
