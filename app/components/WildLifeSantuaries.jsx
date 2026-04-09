@@ -122,12 +122,18 @@ export default function WildLifeSantuaries() {
                         alt=""
                         style={{ opacity: 1, visibility: 'inherit' }}
                     />
-                    {/* Tree icon */}
-                    <div className="absolute inset-0 brightness-70 flex items-center justify-center">
+                    {/* Paw icons */}
+                    <div className="absolute inset-0 brightness-70 flex items-center justify-center gap-[0.2vw]">
                         <img
-                            className="w-[40%]  h-[40%] object-contain"
+                            className="w-[30%] h-[30%] object-contain mt-[1vw]"
                             src="img/pawred.svg"
-                            alt=""
+                            alt="paw footprint"
+                            style={{ opacity: 1, visibility: 'inherit' }}
+                        />
+                        <img
+                            className="w-[30%] h-[30%] object-contain mb-[1vw]"
+                            src="img/pawred.svg"
+                            alt="paw footprint"
                             style={{ opacity: 1, visibility: 'inherit' }}
                         />
                     </div>

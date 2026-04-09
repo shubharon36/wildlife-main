@@ -82,22 +82,22 @@ export default function Footer() {
 
         <div className='flex flex-col items-center gap-[0.4vw] text-[0.95vw] text-center'>
           <Copy delay={0.05}>
-            <p className='font-medium underline underline-offset-[0.3vw]'>Ministry of Environment, Forest and Climate Change (MoEFCC)</p>
+            <p className='font-medium  '>Ministry of Environment, Forest and Climate Change (MoEFCC)</p>
           </Copy>
           <Copy delay={0.1}>
-            <p className='font-medium underline underline-offset-[0.3vw]'>wildlife sanctuaries of India (Wikipedia)</p>
+            <p className='font-medium  '>wildlife sanctuaries of India (Wikipedia)</p>
           </Copy>
           <Copy delay={0.15}>
-            <p className='font-medium underline underline-offset-[0.3vw]'>IUCN Red List (2025–2026)</p>
+            <p className='font-medium  '>IUCN Red List (2025–2026)</p>
           </Copy>
           <Copy delay={0.2}>
-            <p className='font-medium underline underline-offset-[0.3vw]'>National Wildlife Database Cell</p>
+            <p className='font-medium  '>National Wildlife Database Cell</p>
           </Copy>
           <Copy delay={0.25}>
-            <p className='font-medium underline underline-offset-[0.3vw]'>Open Government Data platform India</p>
+            <p className='font-medium  '>Open Government Data platform India</p>
           </Copy>
           <Copy delay={0.3}>
-            <p className='font-medium underline underline-offset-[0.3vw]'>Wildlife Institute of India (WII)</p>
+            <p className='font-medium  '>Wildlife Institute of India (WII)</p>
           </Copy>
         </div>
 
