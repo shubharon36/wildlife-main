@@ -176,16 +176,13 @@ export default function HabitatSpeciesDistribition() {
 
     return (
         <div className='w-full h-fit mb-[10vw] mt-[4vw] min-h-screen bg-[#fff4e5] relative padd text-black!'>
-            <div className='h-fit w-full flex items-start gap-[1vw] justify-start'>
-                <div className='h-[4vw] w-auto mt-[1vw] overflow-hidden rounded-[1vw]'>
-                    {/* <Image src='/paw.svg' alt='leopard' width={1000} height={1000} className='w-full h-full object-contain' /> */}
-                </div>
+            <div className='h-fit w-full flex items-start justify-start'>
                 <h2 className='text-[6vw] w-full font-sansumi leading-[1.2]'>Habitat–Species Distribution Analysis</h2>
 
             </div>
             <Copy>
 
-                <p className='text-[1.2vw] ml-[5vw] w-[50%]'>Comparative patterns of species richness across major habitat types in India's wildlife sanctuaries</p>
+                <p className='text-[1.2vw] w-[50%] mt-4 ml-[0.5vw]'>Comparative patterns of species richness across major habitat types in India's wildlife sanctuaries</p>
             </Copy>
 
             <div className='flex items-center mt-[10vw] justify-center'>

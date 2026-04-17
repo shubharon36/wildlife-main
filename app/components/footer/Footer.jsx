@@ -120,7 +120,7 @@ export default function Footer() {
             <p className='text-[0.85vw] text-black/60'>Framework, Data research, visualisation and information Design</p>
           </Copy>
           <Copy delay={0.05}>
-            <p className='text-[0.95vw] font-bold tracking-wide '>Priyanshi Chauhan</p>
+            <p className='text-[1.25vw] font-bold tracking-wide '>Priyanshi Chauhan</p>
           </Copy>
         </div>
 
@@ -129,7 +129,7 @@ export default function Footer() {
             <p className='text-[0.85vw] text-black/60'>Project Guide</p>
           </Copy>
           <Copy delay={0.15}>
-            <p className='text-[0.95vw] font-bold tracking-wide'>Prof. Dr. Anupam Rana</p>
+            <p className='text-[1.25vw] font-bold tracking-wide'>Prof. Dr. Anupam Rana</p>
           </Copy>
         </div>
       </div>

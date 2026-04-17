@@ -57,18 +57,18 @@ export default function ExploreByRegions({ regions: regionsProp } = {}) {
   }
 
   return (
-    <div className="min-h-[120vh] bg-[#fff4e5] w-full text-black! relative padd pb-[8vw]! mt-[-15vw] space-y-[2vw]">
-      <Copy>
-
-        <h2 className="text-[6vw] font-sansumi leading-[1.2]">Explore by <span className='text-transparent font-normal!' style={{ WebkitTextStroke: '2px var(--foreground)' }}>Regions.</span></h2>
-      </Copy>
-      <Copy>
-
-        <p className="w-[30%] text-[1vw]">
-          India&apos;s wildlife sanctuaries span seven distinct geographical regions, each with unique ecosystems and
-          species.
-        </p>
-      </Copy>
+    <div className="min-h-[120vh] bg-[#fff4e5] w-full text-black! relative padd pb-[8vw]! mt-[-15vw]">
+      <div className="flex flex-col items-start w-full space-y-[2vw]">
+        <Copy>
+          <h2 className="text-[6vw] font-sansumi leading-[1.2]">Explore by <span className='text-transparent font-normal!' style={{ WebkitTextStroke: '2px var(--foreground)' }}>Regions.</span></h2>
+        </Copy>
+        <Copy>
+          <p className="w-[30%] text-[1vw] ml-[0.5vw]">
+            India&apos;s wildlife sanctuaries span seven distinct geographical regions, each with unique ecosystems and
+            species.
+          </p>
+        </Copy>
+      </div>
 
       {regions.map((region) => (
         <RegionBubble key={region.name} region={region} onOpen={openDrawer} />

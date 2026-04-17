@@ -360,7 +360,7 @@ export default function DiscoverWildlife() {
         <p className='text-[6vw] font-sansumi w-[75%] leading-none'>Threatened Species of <span className='text-transparent font-normal!' style={{ WebkitTextStroke: '2px var(--foreground)' }}>India.</span></p>
       </Copy>
       <Copy>
-        <p className='text-[1.2vw] w-[60%] mt-4 mb-8 text-stone-600'>Explore species at risk of extinction, categorized by conservation status based on IUCN classification</p>
+        <p className='text-[1.2vw] w-[60%] mt-4 mb-8 text-stone-600 ml-[0.5vw]'>Explore species at risk of extinction, categorized by conservation status based on IUCN classification</p>
       </Copy>
 
 

@@ -10,25 +10,15 @@ export default function DistributionAnalysis() {
 
     return (
         <div className='h-fit space-y-[1vw] relative w-full bg-[#fff4e5] pt-[12vw]! padd py-[8vw]! text-black! overflow-hidden'>
-            <div className='h-fit w-full flex items-start gap-[1vw] justify-start'>
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, ease: 'easeOut' }}
-                    viewport={{ once: true }}
-                    className='h-[4vw] w-auto mt-[1vw] overflow-hidden rounded-[1vw]'
-                >
-                    {/* <Image src='/paw.svg' alt='leopard' width={1000} height={1000} className='w-full h-full object-contain' /> */}
-                </motion.div>
-
+            <div className='h-fit w-full flex items-start justify-start'>
                 <Copy>
                     <h2 className="text-[5vw] w-[80%] font-sansumi tracking-tight leading-[1.2]">Sanctuary Distribution: State </h2>
                 </Copy>
             </div>
 
-            <div className='w-[90%] flex items-center justify-between'>
+            <div className='w-[90%] flex items-center justify-between mt-6'>
                 <Copy delay={0.1}>
-                    <p className='text-[1.2vw] ml-[5vw] '>Number of wildlife sanctuaries across Indian states</p>
+                    <p className='text-[1.2vw] ml-[0.5vw]'>Number of wildlife sanctuaries across Indian states</p>
                 </Copy>
 
 

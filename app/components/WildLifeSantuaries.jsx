@@ -25,20 +25,17 @@ export default function WildLifeSantuaries() {
 
     return (
         <div className='relative text-black! h-screen w-full padd'>
-            <div className='flex items-start gap-[1vw]'>
-                <div className='h-[2vw] relative w-auto'>
-                    {/*  <Image src='/paw.svg' alt='logo' width={1000} height={1000} className='w-full mt-[1vw] h-auto object-cover' /> */}
-                </div>
+            <div className='flex items-start'>
                 <Copy>
 
                     <p className='h-fit w-[80%] font-sansumi text-[6vw] leading-none'>Wildlife Sanctuaries of <span className='text-transparent font-normal!' style={{ WebkitTextStroke: '2px var(--foreground)' }}>India.</span></p>
                 </Copy>
             </div>
             <div className='flex h-full w-full items-center justify-between'>
-                <div className='flex h-full pl-[5.5vw] w-full flex-col items-start pt-[5vw]'>
+                <div className='flex h-full w-full flex-col items-start pt-[5vw] mt-[2vw]'>
                     <Copy>
 
-                        <p className='w-[80%] text-[1vw]'>Protected under the Wildlife Protection Act, 1972, India's wildlife sanctuaries form a critical network of conserved landscapes dedicated to safeguarding diverse fauna, flora, and ecological systems. <br /><br />Collectively, they span approximately 1,25,000 km² across the country.</p>
+                        <p className='w-[80%] text-[1vw] ml-[0.5vw]'>Protected under the Wildlife Protection Act, 1972, India's wildlife sanctuaries form a critical network of conserved landscapes dedicated to safeguarding diverse fauna, flora, and ecological systems. <br /><br />Collectively, they span approximately 1,25,000 km² across the country.</p>
                     </Copy>
 
                     <div className='mt-[10vw] flex w-full items-center gap-[5vw]'>
