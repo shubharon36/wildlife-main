@@ -101,7 +101,7 @@ export const regions = [
             "High-altitude sanctuary dedicated to conservation of endangered musk deer",
             "Himalayan zone",
             "April \u2013 June, September \u2013 November",
-            '/img/north6.png',
+            '/img/north3.png',
           ),
           fs(
             "Chail Wildlife Sanctuary",
@@ -111,7 +111,7 @@ export const regions = [
             "Known for dense deodar forests and rich mid-altitude Himalayan wildlife",
             "Himalayan zone",
             "March \u2013 June, September \u2013 November",
-            '/img/north7.png',
+            '/img/north4.png',
           ),
           fs(
             "Kalatop-Khajjiar Wildlife Sanctuary",
@@ -121,7 +121,7 @@ export const regions = [
             "Dense coniferous forest sanctuary known for mid-altitude Himalayan wildlife diversity",
             "Himalayan zone",
             "March \u2013 June, September \u2013 November",
-            '/img/north8.png',
+            '/img/north1.png',
           ),
         ],
       },
@@ -137,7 +137,7 @@ export const regions = [
             "Largest wetland in North India, major migratory bird habitat",
             "Semi-arid zone",
             "October \u2013 March",
-            '/img/wetland9.png',
+            '/img/wetland3.png',
           ),
           fs(
             "Pong Dam Lake Wildlife Sanctuary",
@@ -147,7 +147,7 @@ export const regions = [
             "Ramsar site supporting large populations of migratory birds",
             "Himalayan zone",
             "November \u2013 March",
-            '/img/wetland10.png',
+            '/img/wetland1.png',
           ),
           fs(
             "Sultanpur Bird Sanctuary (Sultanpur National Park)",
@@ -275,7 +275,7 @@ export const regions = [
             "Second largest brackish water lagoon in India supporting large bird populations",
             "Coastal zone",
             "October \u2013 March",
-            '/img/wetland9.png',
+            '/img/wetland3.png',
           ),
           fs(
             "Point Calimere Wildlife Sanctuary",
@@ -285,7 +285,7 @@ export const regions = [
             "Important coastal ecosystem with both terrestrial and marine biodiversity",
             "Coastal zone",
             "October \u2013 March",
-            '/img/wetland10.png',
+            '/img/wetland1.png',
           ),
           fs(
             "Coringa Wildlife Sanctuary",
@@ -391,7 +391,7 @@ export const regions = [
             "One of India\u2019s largest mangrove ecosystems with high crocodile population",
             "Coastal zone",
             "October \u2013 March",
-            '/img/wetland7.png',
+            '/img/wetland3.png',
           ),
           fs(
             "Nalabana Bird Sanctuary (Chilika)",
@@ -401,7 +401,7 @@ export const regions = [
             "Core area of Chilika Lake, major wintering ground for migratory birds",
             "Coastal zone",
             "November \u2013 February",
-            '/img/wetland8.png',
+            '/img/wetland2.png',
           ),
           fs(
             "Sundarbans Wildlife Sanctuary",
@@ -411,7 +411,7 @@ export const regions = [
             "World\u2019s largest mangrove forest and unique tiger habitat",
             "Coastal zone",
             "November \u2013 February",
-            '/img/wetland9.png',
+            '/img/wetland3.png',
           ),
           fs(
             "Lothian Island Wildlife Sanctuary",
@@ -421,7 +421,7 @@ export const regions = [
             "Part of Sundarbans ecosystem with rich mangrove biodiversity",
             "Coastal zone",
             "November \u2013 March",
-            '/img/wetland10.png',
+            '/img/wetland1.png',
           ),
         ],
       },
@@ -737,7 +737,7 @@ export const regions = [
             "Important habitat of the endemic Indian Giant Squirrel",
             "Western Ghats zone",
             "October \u2013 March",
-            '/img/north6.png',
+            '/img/north3.png',
           ),
         ],
       },
@@ -753,7 +753,7 @@ export const regions = [
             "One of the largest bird sanctuaries in India, major wintering ground for migratory birds",
             "Semi-arid zone",
             "November \u2013 February",
-            '/img/wetland7.png',
+            '/img/wetland3.png',
           ),
           fs(
             "Khijadia Wildlife Sanctuary",
@@ -763,7 +763,7 @@ export const regions = [
             "Unique mix of freshwater and marine ecosystems supporting diverse birdlife",
             "Semi-arid zone",
             "October \u2013 March",
-            '/img/wetland8.png',
+            '/img/wetland2.png',
           ),
           fs(
             "Marine National Park (Gulf of Kutch)",
@@ -773,7 +773,7 @@ export const regions = [
             "India\u2019s first marine national park with rich coral reef ecosystem",
             "Coastal zone",
             "October \u2013 March",
-            '/img/wetland9.png',
+            '/img/wetland3.png',
           ),
           fs(
             "Thane Creek Flamingo Sanctuary",
@@ -783,7 +783,7 @@ export const regions = [
             "Important urban wetland supporting large flamingo populations near Mumbai",
             "Coastal zone",
             "November \u2013 March",
-            '/img/wetland10.png',
+            '/img/wetland1.png',
           ),
         ],
       },

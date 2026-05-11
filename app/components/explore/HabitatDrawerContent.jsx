@@ -78,9 +78,15 @@ export default function HabitatDrawerContent({ region, habitat }) {
                   </div>
                 </div>
 
-                <div className='h-[20vw]'>
+                <div className='relative w-full aspect-[3/2] overflow-hidden'>
                   {sanctuary.image ? (
-                    <Image src={sanctuary.image} alt={sanctuary.name} width={1000} height={1000} className='w-full h-full object-cover' />
+                    <Image
+                      src={sanctuary.image}
+                      alt={sanctuary.name}
+                      fill
+                      sizes="45vw"
+                      className='object-cover object-top'
+                    />
                   ) : (
                     <div className='w-full h-full bg-gray-200 flex items-center justify-center'>
                       <span className='text-gray-500 text-[1vw]'>No image available</span>
